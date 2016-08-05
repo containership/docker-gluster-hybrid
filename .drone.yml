@@ -1,0 +1,23 @@
+build:
+  image: library/alpine:latest
+  commands:
+    - echo "No build step yet!"
+
+notify:
+  slack:
+    webhook_url: $$SLACK_RELEASES_WEBHOOK
+    channel: releases
+    username: drone
+
+publish:
+  docker:
+    username: "$$DOCKERHUB_USERNAME"
+    password: "$$DOCKERHUB_PASSWORD"
+    email: "$$DOCKERHUB_EMAIL"
+    repo: containership/docker-cs-gluster-hybrid
+    tag:
+        - $$COMMIT
+        - latest
+    when:
+      branch: master
+      event: push

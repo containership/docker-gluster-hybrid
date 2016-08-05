@@ -1,7 +1,10 @@
-docker-gluster-server
+docker-gluster-hybrid
 ==============
 
 ##About
+
+### Build Status
+[![Build Status](https://drone.containership.io/api/badges/containership/docker-gluster-hybrid/status.svg)](https://drone.containership.io/containership/docker-gluster-hybrid)
 
 ###Description
 Docker image designed to run an gluster server cluster on ContainerShip
