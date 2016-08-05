@@ -5,8 +5,8 @@ MAINTAINER ContainerShip Developers <developers@containership.io>
 ENV GLUSTER_VERSION=3.7
 ENV GLUSTER_HOME=/opt/gluster
 ENV GLUSTER_VOLUME containership
-ENV GLUSTER_BRICK_PATH /mnt/containership/gluster/bricks
-ENV GLUSTER_VOLUME_PATH /mnt/containership/gluster/volumes/$GLUSTER_VOLUME
+ENV GLUSTER_BRICK_PATH /opt/containership/gluster/bricks
+ENV GLUSTER_VOLUME_PATH /opt/containership/gluster/volumes/$GLUSTER_VOLUME
 
 RUN apt-get update && apt-get install -y python-software-properties software-properties-common
 RUN add-apt-repository -y ppa:gluster/glusterfs-$GLUSTER_VERSION && apt-get update
